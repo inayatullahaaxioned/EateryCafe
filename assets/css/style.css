@@ -367,7 +367,6 @@ li {
   top: 50%;
   right: 10px;
 }
-
 /*=================================
   hero section styling ends here
 =================================*/
@@ -534,13 +533,66 @@ li {
 /*=================================
   chef section styling ends here
 =================================*/
+/*=================================
+  menus section styling starts here
+=================================*/
+.menu-section {
+  padding-top: 100px;
+}
 
+.menu-section .wrapper{
+  width: 100%;
+}
 
+.menu-list {
+  margin-top: 46px;
+  flex-wrap: wrap;
+}
 
+.menu-item {
+  flex-basis: 33.33%;
+  position: relative;
+  overflow: hidden;
+}
 
+.menu-cta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;  
+}
 
+.menu-content {
+  width: 100%;
+  padding: 20px 20px 40px;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .7);
+  color: var(--white-color);
+  bottom: 0;
+  transform: translateY(100%);
+}
 
+.item-name {
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
+.variety {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 1000;
+}
+/*=================================
+  menus section styling ends here
+=================================*/
 
 /*=================================
   main styling ends here
