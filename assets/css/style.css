@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -100,24 +101,221 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 79.2%; 
   margin: 0 auto;
 }
+
+/* css reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* common styling */
+.flex {
+  display: flex;
+}
+
+/* root elements  */
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --cta-color: #CE3133;
+  --font-color: #909090;
+}
+
 /*=================================
   Header styling starts here
 =================================*/
+.container { position: relative; }
 
+.header {
+  padding: 24px 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 
+.logo,
+.nav-item,
+.call,
+.cta a {
+  color: var(--white-color);
+}
 
+.logo {
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 800;
+}
 
+.dot { color: var(--cta-color); }
 
+.nav-item {
+  padding: 15px 17px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
 
+.reserve-cta {
+  padding: 10px 24px;
+  border: none;
+  background: var(--cta-color);
+  font-size: 15px;
+}
+
+.nav { margin-right: 9%; }
+
+.call {
+  padding: 15px 22px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.brand-logo {
+  margin-right: 10%;
+}
+
+.call-cta {
+  display: inline-block;
+}
+
+.call-cta::before {
+  content: "\f095";
+  margin:0 5px 0;
+  color: var(--white-color);
+  font-size: 11px;
+  font-family: "FontAwesome";
+  float: left;
+}
 /*=================================
   Header styling ends here
 =================================*/  
 
 /*=================================
   main styling starts here
+=================================*/
+/*=================================
+  hero section styling starts here
+=================================*/
+.hero-section .wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+}
+
+.banner-content {
+  margin-left: 11.5%;
+  position: absolute;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white-color);
+}
+
+.banner-subheading {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.banner-heading {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.banner:not(:first-child) {
+  display: none;
+}
+
+.banner img {
+  max-height: 610px;
+  object-fit: cover;
+}
+
+.banner-cta {
+  padding: 10px 25px;
+  font-size: 15px;
+  border: 1px solid var(--white-color);
+  color: var(--white-color);
+}
+
+.slider-cta {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+/*=================================
+  hero section styling ends here
+=================================*/
+/*=================================
+  about section styling starts here
+=================================*/
+.about {
+  padding: 95px 0 80px;
+}
+
+.about .title {
+  /* margin-bottom: 20px; */
+  display: inline-block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--font-color);
+  font-weight: 800;
+}
+
+.about .heading {
+  font-size: 28px;
+  font-weight: 1000;
+  margin: 10px 0 30px;
+  line-height: 38px;
+}
+
+.about-left {
+  flex-basis: 48%;
+}
+
+.about-right {
+  flex-basis: 52%;
+}
+
+.about-left {
+  padding-right: 6.5%;
+}
+
+.about-para {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--font-color);
+  line-height: 22px;
+  margin-bottom: 8px;
+}
+
+.template {
+  color: var(--black-color);
+  font-weight: lighter;
+}
+
+.about-right img {
+  object-fit: cover;
+}
+/*=================================
+  about section styling ends here
 =================================*/
 
 
