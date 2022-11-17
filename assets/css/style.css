@@ -306,7 +306,6 @@ li {
 /*=================================
   Header styling ends here
 =================================*/
-
 /*=================================
   main styling starts here
 =================================*/
@@ -344,6 +343,7 @@ li {
 .banner-heading {
   font-size: 40px;
   font-weight: 900;
+  margin: 15px 0 35px;
 }
 
 .banner:not(:first-child) {
@@ -366,6 +366,22 @@ li {
   position: absolute;
   top: 50%;
   right: 10px;
+  display: flex;
+  flex-direction: column;
+  text-indent: -9999px;
+}
+
+.slider-btn {
+  display: inline-block;
+}
+
+.slider-btn::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid var(--white-color);
+  float: left;
 }
 /*=================================
   hero section styling ends here
