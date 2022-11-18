@@ -119,9 +119,10 @@
           <span class="subheading">They are Nice and Friendly</span>
           <ul class="chef-list flex">
             <li class="chef-item">
-              <figure>
+              <div class="hover-info">
+                <figure>
                 <img src="assets/images/team-image1.jpg" alt="Chef image" class="chef-img">
-              </figure>
+                </figure>
               <div class="chef-details">
                 <p>Duis vel lacus id magna mattis vehicula</p>
                 <ul class="chef-social">
@@ -133,13 +134,15 @@
                   </li>
                 </ul>
               </div>
+              </div>
               <div class="chef-info">
                 <h4 class="chef-name">New Catherine</h4>
                 <span class="designation">Kitchen Officer</span>
               </div>
             </li>
             <li class="chef-item">
-              <figure>
+              <div class="hover-info">
+                <figure>
                 <img src="assets/images/team-image2.jpg" alt="Chef image" class="chef-img">
               </figure>
               <div class="chef-details">
@@ -153,13 +156,15 @@
                   </li>
                 </ul>
               </div>
+              </div>
               <div class="chef-info">
                 <h4 class="chef-name">New Catherine</h4>
                 <span class="designation">Kitchen Officer</span>
               </div>
             </li>
             <li class="chef-item">
-              <figure>
+              <div class="hover-info">
+                <figure>
                 <img src="assets/images/team-image3.jpg" alt="Chef image" class="chef-img">
               </figure>
               <div class="chef-details">
@@ -172,6 +177,7 @@
                     <a href="#FIXME" class="chef-icon envelope" title="Email" target="_blank" rel="noopener noreferrer">Email</a>
                   </li>
                 </ul>
+              </div>
               </div>
               <div class="chef-info">
                 <h4 class="chef-name">New Catherine</h4>
@@ -272,9 +278,6 @@
       <!-- menus section styling ends -->
       <!-- testimonials section styling starts -->
       <section class="testimonial">
-        <figure class="testimonial-bg">
-          <img src="assets/images/testimonial-bg.jpg" alt="Testimonials background">
-        </figure>
         <div class="wrapper">
           <h3 class="heading">Testimonials</h3>
           <ul class="testimonial-list">
@@ -301,9 +304,9 @@
             </li>
           </ul>
           <div class="testimonial-cta">
-            <a href="#FIXME" class="cta-dot" title="Slide one">Cta dot</a>
-            <a href="#FIXME" class="cta-dot" title="Slide two">Cta dot</a>
-            <a href="#FIXME" class="cta-dot" title="Slide three">Cta dot</a>
+            <a href="#FIXME" class="slider-btn" title="Slide one">Cta dot</a>
+            <a href="#FIXME" class="slider-btn" title="Slide two">Cta dot</a>
+            <a href="#FIXME" class="slider-btn" title="Slide three">Cta dot</a>
           </div>
         </div>
       </section>
@@ -315,7 +318,7 @@
           <div class="contact-box">
             <h3 class="heading">Contact Us</h3>
             <form action="#FIXME" class="form" method="post">
-              <div class="input-row">
+              <div class="input-row flex">
                 <div class="input-box">
                   <input type="text" name="Full Name" placeholder="Full Name">
                 </div>
@@ -327,9 +330,9 @@
                 <input type="text" name="Subject" placeholder="Subject">
               </div>
               <div class="input-row">
-                <textarea name="message"  rows="9" placeholder="Tell about your project"></textarea>
+                <textarea name="message"  rows="7" placeholder="Tell about your project"></textarea>
               </div>
-              <input type="submit" value="Send Message">
+              <input class="submit-btn" type="submit" value="Send Message">
             </form>
           </div>
         </div>
@@ -339,13 +342,13 @@
     <!--main section end-->
     <!--footer section start-->
     <footer class="footer">
-      <div class="wrapper">
-        <ul class="footer-list">
-          <li>
+      <div class="wrapper flex">
+        <ul class="footer-list flex">
+          <li class="footer-item">
             <h6 class="footer-menu">Find us</h6>
-            <address>123 nulla a cursus rhoncus augue sem viverra 10870 id ultricies sapien</address>
+            <address>123 nulla a cursus rhoncus, augue sem viverra 10870 id ultricies sapien</address>
           </li>
-          <li>
+          <li class="footer-item">
             <h6 class="footer-menu">Reservation</h6>
             <ul class="reachout-list">
               <li>
@@ -355,7 +358,7 @@
               <li>
                 <a href="mailto:info@company.com" class="email" title="info@company.com" target="_blank" rel="noopener noreferrer">info@company.com</a>
               </li>
-              <li>
+              <li class="line">
                 Line: <a href="#FIXME" class="line" title="eatery247" target="_blank" rel="noopener noreferrer">eatery247</a>
               </li>
             </ul>
@@ -373,7 +376,7 @@
             </li>
             <li>
               <span class="days">Saturday - Sunday</span>
-              <span class="time">11.00 AM to 10.00 PM</span>
+              <span class="time">11.00 AM - 10.00 PM</span>
             </li>
           </ul>
         </div>
@@ -395,8 +398,8 @@
           <div class="copyright-div">
             <span>Copyright &copy; 2018</span>
             <span>Your Company Name</span>
-            <span>Design:
-              <a href="#FIXME" class="design" title="TemplateMo">TemplateMo</a>
+            <span class="design">Design:
+              <a href="#FIXME" class="template" title="TemplateMo">TemplateMo</a>
             </span>
           </div>
         </div>
