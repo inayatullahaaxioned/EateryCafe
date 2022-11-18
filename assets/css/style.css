@@ -411,10 +411,11 @@ a {
 }
 
 .about .heading {
-  font-size: 28px;
-  font-weight: 1000;
+  font-size: 26px;
+  font-weight: 800;
   margin: 10px 0 30px;
   line-height: 38px;
+  text-align: left;
 }
 
 .about-left {
@@ -749,17 +750,166 @@ textarea {
 /*=================================
   main styling ends here
 =================================*/
-
 /*=================================
   footer styling starts here
 =================================*/
+.footer {
+  padding: 95px 0 68px;
+}
+
+/* .footer .wrapper {
+  justify-content: space-between;
+} */
+
+.footer-menu {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.social {
+  margin: 40px 0;
+}
+
+.footer-item:nth-child(1) {
+  flex-basis: 52%;
+}
+
+.footer-list {
+  padding-top: 39px;
+  flex-basis: 49.5%;
+}
+
+.open-hours {
+  flex-basis: 31.5%;
+}
+
+address {
+  padding-right: 33%;
+  font-size: 15px;
+  color: var(--font-color);
+  line-height: 22px;
+}
 
 
+.open-hours {
+  padding: 42px 75px 52px;
+  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../images/footer-open-hour-bg.jpg) center no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  overflow: hidden;
+  color: var(--white-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.open-hours .footer-menu {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.time {
+  font-size: 13px;
+}
+
+.days {
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+}
 
 
+.social-icon {
+  display: inline-block;
+  text-indent: -9999px;
+  
+}
+
+.social-icon::before {
+  content: "\f082";
+  font-family: "FontAwesome";
+  float: left;
+  color: var(--cta-color);
+  text-indent: 0;
+  font-size: 13px;
+  margin-right: 22px;
+}
+
+.twitter::before { content: "\f099"; }
+.instagram::before { content: "\f16d"; }
+.google::before { 
+  content: "\f1a0";
+  margin-right: 0;
+}
 
 
+.copyright-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.copyright-div span,
+.copyright-div a {
+  color: var(--font-color);
+  font-size: 14px;
+}
+
+.copyright-div span:not(:first-child) {
+  display: inline-block;
+  line-height: 30px;
+}
+
+.design {
+  margin-top: 14px;
+}
+
+.template-anc { font-size: 14px; }
+
+.social-footer {
+  margin-left: 4.5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.reachout-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.reachout-list li {
+  line-height: 22px;
+}
+
+.reachout-list .number:nth-child(1) {
+  border-right: 1px solid var(--font-color);
+}
+
+.line {
+  text-transform: uppercase;
+}
+
+.line a { text-transform: lowercase; }
+
+.reachout-list a {
+ font-size: 13px;
+ color: var(--font-color);
+}
+
+.number:nth-child(1) { padding-right: 5px; }
+
+.line {
+  color: var(--font-color);
+}
+
+.hour-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 /*=================================
   footer styling ends here
 =================================*/
@@ -767,6 +917,12 @@ textarea {
 /*media query starts*/
 /*media query for hover effect 996px starts here*/
 @media only screen and (min-width: 996px) {
+  .nav-item:hover,
+  .call-cta:hover {
+    color: var(--cta-color);
+    transition: all .3s;
+  }
+
   .hover-info:hover .chef-details {
     transform: translateY(0);
     transition: all .5s;
