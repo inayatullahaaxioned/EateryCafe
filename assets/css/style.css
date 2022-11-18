@@ -277,6 +277,7 @@ a {
   border: none;
   background: var(--cta-color);
   font-size: 15px;
+  transition: all .3s;
 }
 
 .nav {
@@ -392,6 +393,10 @@ a {
 .slider-btn.active::before {
   background-color: var(--white-color);
 }
+
+.slider-btn.active::before {
+  background-color: var(--white-color);
+}
 /*=================================
   hero section styling ends here
 =================================*/
@@ -441,6 +446,7 @@ a {
 .template {
   color: var(--black-color);
   font-weight: lighter;
+  font-size: 14px;
 }
 
 .about-right img {
@@ -741,6 +747,7 @@ textarea {
   padding: 16px 0;
   color: var(--white-color);
   font-weight: 800;
+  transition: all .3s;
 }
 
 .contact .heading { margin-bottom: 7px; }
@@ -866,8 +873,6 @@ address {
   margin-top: 14px;
 }
 
-.template-anc { font-size: 14px; }
-
 .social-footer {
   margin-left: 4.5%;
   display: flex;
@@ -923,6 +928,17 @@ address {
     transition: all .3s;
   }
 
+  .reserve-cta:hover {
+    background-color: #282828;
+    transition: all .3s;
+  }
+
+  .banner-cta:hover {
+    background-color: var(--cta-color);
+    border-color: transparent;
+    transition: all .3s;
+  }
+
   .hover-info:hover .chef-details {
     transform: translateY(0);
     transition: all .5s;
@@ -938,4 +954,23 @@ address {
     transform: translateY(0);
     transition: all .4s;
   }
+
+  .social-icon:hover::before {
+    transform: scale(1.08);
+    transition: all .3s;
+  }
+
+  .number:hover,
+  .email:hover,
+  .line a:hover,
+  .template:hover {
+    color: red;
+    transition: all .3s;
+  }
+
+  .submit-btn:hover {
+    background-color: #292929;
+    transition: all .3s;
+  }
 }
+/*media query for hover effect 996px ends here*/
