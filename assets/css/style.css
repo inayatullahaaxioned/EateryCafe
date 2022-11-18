@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -219,6 +219,10 @@ li {
   display: flex;
 }
 
+a {
+  font-family: 'Montserrat', sans-serif;
+}
+
 /* root elements  */
 :root {
   --white-color: #fff;
@@ -276,7 +280,7 @@ li {
 }
 
 .nav {
-  margin-right: 9%;
+  margin-right: 5%;
 }
 
 .call {
@@ -323,14 +327,14 @@ li {
 }
 
 .banner-content {
+  padding: 228px 0 175px;
   margin-left: 11.5%;
   position: absolute;
   top: 0;
-  width: 45%;
+  width: 47%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   color: var(--white-color);
 }
 
@@ -338,11 +342,12 @@ li {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .banner-heading {
-  font-size: 40px;
-  font-weight: 900;
+  font-size: 39px;
+  font-weight: 700;
   margin: 15px 0 35px;
 }
 
@@ -364,7 +369,7 @@ li {
 
 .slider-cta {
   position: absolute;
-  top: 50%;
+  top: 52.5%;
   right: 10px;
   display: flex;
   flex-direction: column;
@@ -394,7 +399,6 @@ li {
 }
 
 .about .title {
-  /* margin-bottom: 20px; */
   display: inline-block;
   font-size: 10px;
   text-transform: uppercase;
@@ -609,6 +613,13 @@ li {
 /*=================================
   menus section styling ends here
 =================================*/
+/*=================================
+  testimonial section styling starts here
+=================================*/
+
+/*=================================
+  testimonial section styling ends here
+=================================*/
 
 /*=================================
   main styling ends here
@@ -629,5 +640,7 @@ li {
 =================================*/
 
 /*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {}
+/*media query for hover effect 996px starts here*/
+@media only screen and (min-width: 996px) {
+  
+}
