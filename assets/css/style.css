@@ -223,6 +223,18 @@ a {
   font-family: 'Montserrat', sans-serif;
 }
 
+.heading { color: #353535; }
+
+.banner::before,
+.testimonial::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, .4);
+}
+
 /* root elements  */
 :root {
   --white-color: #fff;
@@ -241,6 +253,10 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--black-color);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 /*=================================
   Header styling starts here
@@ -326,7 +342,8 @@ a {
 .header.scroll .nav-item,
 .header.scroll .logo,
 .header.scroll .call,
-.header.scroll .call-cta {
+.header.scroll .call-cta,
+.header.scroll .call-cta::before {
   color: var(--light-black);
 }
 
@@ -458,7 +475,7 @@ html.remove-scroll {
   about section styling starts here
 =================================*/
 .about {
-  padding: 90px 0 80px;
+  padding: 90px 0 42px;
 }
 
 .about .title {
@@ -541,8 +558,8 @@ html.remove-scroll {
 }
 
 .chef-item {
-  flex-basis: 32%;
-  margin-right: 2.7%;
+  flex-basis: 31.2%;
+  margin-right: 3.3%;
 }
 
 .hover-info {
@@ -567,7 +584,7 @@ html.remove-scroll {
   color: var(--white-color);
   background-color: rgba(0, 0, 0, .7);
   transform: translateY(100%);
-  transition: all 0.3s;
+  transition: all .3s;
 }
 
 .chef-details p {
@@ -609,13 +626,14 @@ html.remove-scroll {
   font-size: 20px;
   font-weight: 1000;
   margin-bottom: 5px;
+  color: var(--light-black);
 }
 
 .designation {
   font-size: 12px;
   font-weight: 1000;
   text-transform: uppercase;
-  color: var(--font-color);
+  color: #bfbdbd;
 }
 /*=================================
   chef section styling ends here
@@ -740,7 +758,7 @@ html.remove-scroll {
 =================================*/
 .contact {
   padding: 92px 0;
-  border-bottom: 1px solid #c9c9c9;
+  border-bottom: 1px solid #0000000d;
 }
 
 iframe {
@@ -814,18 +832,14 @@ textarea {
   padding: 95px 0 68px;
 }
 
-/* .footer .wrapper {
-  justify-content: space-between;
-} */
-
 .footer-menu {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
   margin-bottom: 22px;
 }
 
 .social {
-  margin: 40px 0;
+  margin: 34px 0;
 }
 
 .footer-item:nth-child(1) {
@@ -842,8 +856,8 @@ textarea {
 }
 
 address {
-  padding-right: 33%;
-  font-size: 15px;
+  padding-right: 38%;
+  font-size: 14px;
   color: var(--font-color);
   line-height: 22px;
 }
@@ -851,7 +865,7 @@ address {
 
 .open-hours {
   padding: 42px 7% 52px;
-  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../images/footer-open-hour-bg.jpg) center no-repeat;
+  background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url(../images/footer-open-hour-bg.jpg) center no-repeat;
   background-size: cover;
   border-radius: 20px;
   overflow: hidden;
@@ -886,12 +900,16 @@ address {
 
 .social-icon::before {
   content: "\f082";
+  width: 31px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--cta-color);
   font-family: "FontAwesome";
   float: left;
-  color: var(--cta-color);
   text-indent: 0;
   font-size: 13px;
-  margin-right: 22px;
 }
 
 .twitter::before { content: "\f099"; }
@@ -924,7 +942,7 @@ address {
 }
 
 .social-footer {
-  margin-left: 4.5%;
+  margin-left: 4%;
   display: flex;
   flex-direction: column;
 }
@@ -937,10 +955,6 @@ address {
 
 .reachout-list li {
   line-height: 22px;
-}
-
-.reachout-list .number:nth-child(1) {
-  border-right: 1px solid var(--font-color);
 }
 
 .line {
@@ -1065,7 +1079,7 @@ address {
 /*media query for 995px starts here*/
 @media screen and (max-width:995px) {
   .header {
-    position: relative;
+    position: sticky;
     background-color: var(--white-color);
   }
 
@@ -1081,7 +1095,7 @@ address {
   .hamburger.active {
     padding: 10px 0;
     display: block;
-    transition: all 0.5s ease-out;
+    transition: all .5s ease-out;
   }
 
   .hamburger.active .bar::before { opacity: 0; }
@@ -1099,7 +1113,7 @@ address {
 
   .nav.active {
     left: 0;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
   }
 
   .nav.active .nav-list {
@@ -1108,12 +1122,12 @@ address {
     align-items: center;
     height: 100%;
     flex-direction: column;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
   }
 
   .cta {
     position: fixed;
-    bottom: 38%;
+    bottom: 24%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1124,7 +1138,7 @@ address {
     transform: translateX(-50%);
     text-align: center;
     width: 100%;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
   }
 
 
@@ -1135,7 +1149,8 @@ address {
   }
 
   .cta.active .call-cta,
-  .cta.active .call {
+  .cta.active .call,
+  .cta.active .call-cta::before  {
     color: var(--light-black);
   }
 
@@ -1155,7 +1170,7 @@ address {
     bottom: 0;
     transform: inherit;
     height: fit-content;
-    padding: 0;
+    padding: 0 20px;
   }
 
   .chef-details p {
@@ -1298,6 +1313,11 @@ address {
   .about-para,
   .template {
     font-size: 10px;
+  }
+
+  .input-row { flex-direction: column; }
+  .input-row .input-box:nth-child(1) {
+    margin-right: 0;
   }
 }
 /*media query for 480px ends here*/
