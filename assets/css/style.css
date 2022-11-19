@@ -200,7 +200,7 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 79.2%;
+  width: 79.3%;
   margin: 0 auto;
 }
 
@@ -227,11 +227,21 @@ a {
 :root {
   --white-color: #fff;
   --black-color: #000;
+  --light-black : #454545;
   --cta-color: #CE3133;
-  --font-color: #909090;
+  --font-color: #757575;
   --section-bg-color: #f9f9f9;
 }
 
+/* scroll bar styling  */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--black-color);
+}
 /*=================================
   Header styling starts here
 =================================*/
@@ -239,13 +249,19 @@ a {
   position: relative;
 }
 
+.header .wrapper {
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header {
-  padding: 24px 0;
+  padding: 27px 0;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   right: 0;
+  transition: all .3s ease;
 }
 
 .logo,
@@ -257,8 +273,8 @@ a {
 
 .logo {
   padding: 10px 0;
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .dot {
@@ -280,19 +296,11 @@ a {
   transition: all .3s;
 }
 
-.nav {
-  margin-right: 5%;
-}
-
 .call {
   padding: 15px 22px;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.brand-logo {
-  margin-right: 10%;
 }
 
 .call-cta {
@@ -308,6 +316,52 @@ a {
   float: left;
 }
 
+.header.scroll {
+  padding: 20px 0;
+  background-color: var(--white-color);
+  color: var(--light-black);
+  transition: all .3s ease;
+}
+
+.header.scroll .nav-item,
+.header.scroll .logo,
+.header.scroll .call,
+.header.scroll .call-cta {
+  color: var(--light-black);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar,
+.bar::before,
+.bar::after {
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  display: inline-block;
+  position: relative;
+  background-color: var(--black-color);
+  text-indent: -9999px;
+  transition: all .3s;
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  margin: 7px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bar::after { top: 7px; }
+
+html.remove-scroll {
+  overflow-y: hidden;
+}
 /*=================================
   Header styling ends here
 =================================*/
@@ -349,7 +403,7 @@ a {
 .banner-heading {
   font-size: 39px;
   font-weight: 700;
-  margin: 15px 0 35px;
+  margin: 15px 0 40px;
 }
 
 .banner:not(:first-child) {
@@ -362,8 +416,8 @@ a {
 }
 
 .banner-cta {
-  padding: 10px 25px;
-  font-size: 15px;
+  padding: 10px 23px;
+  font-size: 13px;
   border: 1px solid var(--white-color);
   color: var(--white-color);
 }
@@ -371,7 +425,7 @@ a {
 .slider-cta {
   position: absolute;
   top: 52.5%;
-  right: 10px;
+  right: 2.3%;
   display: flex;
   flex-direction: column;
   text-indent: -9999px;
@@ -404,7 +458,7 @@ a {
   about section styling starts here
 =================================*/
 .about {
-  padding: 95px 0 80px;
+  padding: 90px 0 80px;
 }
 
 .about .title {
@@ -418,26 +472,25 @@ a {
 .about .heading {
   font-size: 26px;
   font-weight: 800;
-  margin: 10px 0 30px;
+  margin: 10px 0 28px;
   line-height: 38px;
   text-align: left;
 }
 
 .about-left {
-  flex-basis: 48%;
+  flex-basis: 51%;
 }
 
 .about-right {
-  flex-basis: 52%;
+  flex-basis: 49%;
 }
 
 .about-left {
-  padding-right: 6.5%;
+  padding-right: 10.5%;
 }
 
 .about-para {
   font-size: 13px;
-  font-weight: 600;
   color: var(--font-color);
   line-height: 22px;
   margin-bottom: 8px;
@@ -517,7 +570,7 @@ a {
   color: var(--white-color);
   background-color: rgba(0, 0, 0, .6);
   transform: translateY(100%);
-  transition: all .5s;
+  transition: all 0.3s;
 }
 
 .chef-details p {
@@ -690,7 +743,7 @@ a {
 =================================*/
 .contact {
   padding: 92px 0;
-  border-bottom: 1px solid #f7f7f7;
+  border-bottom: 1px solid #c9c9c9;
 }
 
 iframe {
@@ -710,7 +763,7 @@ textarea {
   width: 100%;
   padding: 20px 12px;
   border: none;
-  border-bottom: 1px solid var(--font-color);
+  border-bottom: 1px solid #c9c9c9;
   outline: none;
   resize: none;
 }
@@ -974,3 +1027,98 @@ address {
   }
 }
 /*media query for hover effect 996px ends here*/
+/*media query for 1280 starts here*/
+@media screen and (max-width:1280px) {
+  .nav-item {
+    padding: 13px 10px;
+  }
+
+  .call {
+    padding: 12px;
+  }
+
+  .reserve-cta {
+    padding: 8px 15px;
+  }
+}
+/*media query for 1280px ends here*/
+/*media query for 1024px starts here*/
+@media screen and (max-width:1024px) {
+  .nav-item,
+  .call {
+    font-size: 11px;
+  }
+
+}
+/*media query for 1024px starts here*/
+
+/*media query for 995px starts here*/
+@media screen and (max-width:995px) {
+  .nav-list {
+    display: none;
+  }
+  
+  .hamburger { display: block; }
+
+  .hamburger.active {
+    padding: 10px 0;
+    display: block;
+    transition: all 0.5s ease-out;
+  }
+
+  .hamburger.active .bar::before { opacity: 0; }
+  .hamburger.active .bar { transform: translateY(0) rotate(45deg); }
+  .hamburger.active .bar:after { transform: translateY(-14px) rotate(-90deg); }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    left: -100%;
+    background: var(--white-color);
+  }
+
+  .nav.active {
+    left: 0;
+    transition: all 0.3s ease;
+  }
+
+  .nav.active .nav-list {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+
+  .cta {
+    position: fixed;
+    bottom: 220px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: -100%;
+    gap: 15px;
+    margin: 0 auto;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+
+  .cta.active { left: 50%; }
+
+  .nav.active a {
+    color: var(--light-black);
+  }
+
+  .cta.active .call-cta,
+  .cta.active .call {
+    color: var(--light-black);
+  }
+}
