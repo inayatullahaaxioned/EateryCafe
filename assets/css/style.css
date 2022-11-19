@@ -558,9 +558,6 @@ html.remove-scroll {
   padding: 25px 23%;
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -853,7 +850,7 @@ address {
 
 
 .open-hours {
-  padding: 42px 75px 52px;
+  padding: 42px 7% 52px;
   background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../images/footer-open-hour-bg.jpg) center no-repeat;
   background-size: cover;
   border-radius: 20px;
@@ -1040,6 +1037,14 @@ address {
   .reserve-cta {
     padding: 8px 15px;
   }
+
+  .banner img { max-height: inherit; }
+
+  .banner-content {
+    width: 75%;
+    padding: 0;
+    justify-content: center;
+  }
 }
 /*media query for 1280px ends here*/
 /*media query for 1024px starts here*/
@@ -1049,11 +1054,20 @@ address {
     font-size: 11px;
   }
 
+  .banner-subheading { font-size: 12px; }
+  .banner-heading { font-size: 32px; }
 }
 /*media query for 1024px starts here*/
 
 /*media query for 995px starts here*/
 @media screen and (max-width:995px) {
+  .header {
+    background-color: var(--white-color);
+  }
+
+  .logo {
+    color: var(--light-black);
+  }
   .nav-list {
     display: none;
   }
@@ -1095,8 +1109,7 @@ address {
 
   .cta {
     position: fixed;
-    bottom: 220px;
-    display: block;
+    bottom: 38%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1121,4 +1134,142 @@ address {
   .cta.active .call {
     color: var(--light-black);
   }
+
+  .about {
+    padding: 50px 0;
+  }
+  .about .wrapper {
+    flex-direction: column;
+  }
+
+  .menu-section {
+    padding-top: 50px;
+  }
+
+  .chef-details {
+    top: auto;
+    bottom: 0;
+    transform: inherit;
+    height: fit-content;
+    padding: 0;
+  }
+
+  .chef-details p {
+    font-size: 14px;
+  }
+
+  .chef-icon::before {
+    width: 30px;
+    height: 30px;
+    background-color: var(--cta-color);
+  }
+
+  .menu-content {
+    padding: 20px;
+    transform: inherit;
+  }
+
+  .testimonial {
+    padding: 30px 0;
+  }
+
+  .testimonial .heading {
+    margin-bottom: 20px;
+  }
+
+  .contact { padding: 50px 0; }
+
+  iframe {
+    width: 100%;
+  }
+
+  .contact .wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer .wrapper {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .footer-list {
+    flex-basis: 100%;
+  }
+
+  .open-hours,
+  .social-footer {
+    flex-basis: 44.5%;
+  }
+
+  .menu-item { flex-basis: 50%; }
+
+  
 }
+/*media query for 995px ends here*/
+
+/*media query for 768px starts here*/
+@media screen and (max-width:768px) {
+  .banner-subheading { font-size: 10px; }
+
+  .banner-heading {
+    font-size: 26px;
+  }
+
+  .menu-item {
+    margin-bottom: 15px;
+    flex-basis: 48.3%;
+  }
+
+  .menu-list { gap: 3%; }
+  .menu-content { padding: 5px 10px; }
+  .item-name { font-size: 14px; }
+  .variety { font-size: 11px; }
+  .price { font-size: 15px; }
+
+  .chef { padding: 40px 0; }
+
+  .chef-list {
+    margin-top: 25px;
+    flex-wrap: wrap;
+  }
+  
+  .chef-item {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .testimonial-item {
+    width: 100%;
+  }
+
+  .testimonial-para {
+    font-size: 14px;
+  }
+
+  .footer { padding: 20px 0; }
+
+  .footer-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .social { margin: 10px 0; }
+  .open-hours,
+  .social-footer {
+    flex-basis: 100%;
+  }
+}
+/*media query for 768px ends here*/
+
+/*media query for 480px starts here*/
+@media screen and (max-width:480px) {
+  .header { padding: 10px 0; }
+
+  .menu-section .wrapper { width: 79.3%; }
+  .menu-list { margin-top: 20px; }
+  .menu-item {
+    flex-basis: 100%;
+  }
+}
+/*media query for 480px ends here*/
