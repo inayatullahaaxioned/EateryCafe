@@ -565,7 +565,7 @@ html.remove-scroll {
   align-items: center;
   flex-direction: column;
   color: var(--white-color);
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, .7);
   transform: translateY(100%);
   transition: all 0.3s;
 }
@@ -1056,12 +1056,16 @@ address {
 
   .banner-subheading { font-size: 12px; }
   .banner-heading { font-size: 32px; }
+  .slider-cta {
+    transform: translateY(-52%);
+  }
 }
 /*media query for 1024px starts here*/
 
 /*media query for 995px starts here*/
 @media screen and (max-width:995px) {
   .header {
+    position: relative;
     background-color: var(--white-color);
   }
 
@@ -1155,7 +1159,7 @@ address {
   }
 
   .chef-details p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .chef-icon::before {
@@ -1216,6 +1220,10 @@ address {
     font-size: 26px;
   }
 
+  .about-left { padding-right: 0; }
+  .about .heading { font-size: 22px; }
+  .about-para { font-size: 11px; }
+
   .menu-item {
     margin-bottom: 15px;
     flex-basis: 48.3%;
@@ -1233,7 +1241,7 @@ address {
     margin-top: 25px;
     flex-wrap: wrap;
   }
-  
+
   .chef-item {
     flex-basis: 100%;
     margin-right: 0;
@@ -1266,10 +1274,30 @@ address {
 @media screen and (max-width:480px) {
   .header { padding: 10px 0; }
 
+  .banner-heading {
+    margin: 10px 0 20px;
+    font-size: 18px;
+  }
+
+  .banner-cta { padding: 8px 15px; }
+
   .menu-section .wrapper { width: 79.3%; }
   .menu-list { margin-top: 20px; }
   .menu-item {
     flex-basis: 100%;
+  }
+
+  .about { padding: 30px 0; }
+  .about .heading {
+    margin: 5px 0 15px;
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .about-para { line-height: 18px; }
+  .about-para,
+  .template {
+    font-size: 10px;
   }
 }
 /*media query for 480px ends here*/
