@@ -120,7 +120,7 @@ const form = document.querySelector('.form'),
 let isValid;
 const nameRegex = /^([A-Za-z]+)?([A-Za-z ]+)$/,
   emailRegex = /^([A-Za-z][A-Za-z0-9\-\_\.]+[A-Za-z0-9])\@([A-Za-z]{2,})\.([A-Za-z]{2,})$/,
-  commonRegex = /^[A-Za-z]+$/;
+  commonRegex = /^[A-Za-z0-9]+$/;
 
 //form validation on submit start
 form.addEventListener('submit', function validateForm(e) {
@@ -131,7 +131,6 @@ form.addEventListener('submit', function validateForm(e) {
   validateInput(messageBox, commonRegex, 10, 250);
 
   let error = document.querySelectorAll('.error');
-  console.log(error);
   if (error.length == 0) {
     const successMsg = document.createElement('div'),
       contactSection = document.querySelector('.contact');
@@ -147,7 +146,6 @@ form.addEventListener('submit', function validateForm(e) {
 
 //function for validating inputs in form start
 function validateInput(input, regex = "", minLimit = 4, maxLimit = 25) {
-  console.log('here');
   isValid == true;
   let error = input.parentElement.querySelector('.error');
   if (error) {
@@ -182,4 +180,79 @@ function appendError(input, errorMsg) {
 }
 //form validation end here
 
-//modal and slider for menu section 
+//modal and slider for menu section start
+const menu = document.querySelector('.menu-section'),
+  menuItem = document.querySelectorAll('.menu-item');
+
+menuItem.forEach(function (item, index) {
+  item.addEventListener('click', function (e) {
+    modal(item, index);
+
+    const body = document.querySelector('body');
+    body.addEventListener('click', function (e) {
+      // next btn function
+      if (e.target.classList.contains('next-control')) {
+        const modalBox = document.querySelector('.modal-box');
+        console.log(modalBox);
+        if (modalBox) {
+          modalBox.remove();
+        }
+        if (index < menuItem.length - 1) {
+          index++;
+        } else {
+          index = 0;
+        }
+        modal(menuItem[index], index);
+      };
+      // previous btn function
+      if (e.target.classList.contains('prev-control')) {
+        const modalBox = document.querySelector('.modal-box');
+        console.log(modalBox);
+        if (modalBox) {
+          modalBox.remove();
+        }
+        if (index == 0) {
+          index = menuItem.length - 1;
+        } else {
+          index--;
+        }
+        modal(menuItem[index], index);
+      };
+    })
+  });
+})
+
+//modal function start
+function modal(item, index) {
+  let imageSource = item.querySelector('.menu-image img').src,
+    menuTitle = item.querySelector('.item-name').innerText;
+  html.classList.add('remove-scroll');
+  const modalBox = document.createElement('div');
+  modalBox.className = "modal-box";
+  modalBox.innerHTML = `<div class="modal-content">
+          <a class="prev-control" href="#FIXME" title="Prev Item">Prev Item</a>
+          <a class="next-control" href="#FIXME" title="Next Item">Next Item</a>
+          <span class="close-btn">x</span>
+          <figure class="modal-img">
+            <img src="${imageSource}" alt="Menu image">
+            <figcaption class="product-name">${menuTitle}</figcaption>
+          </figure>
+        </div>`
+  menu.appendChild(modalBox);
+
+  //modal close js
+  const modalImage = document.querySelector('.modal-img'),
+    activeModal = document.querySelector('.modal-box');
+  modalImage.addEventListener('click', function (e) {
+    e.stopPropagation();
+  })
+
+  activeModal.addEventListener('click', function () {
+    console.log(html);
+    activeModal.remove();
+    html.classList.remove('remove-scroll');
+  });
+};
+//modal function start
+
+
