@@ -232,6 +232,7 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
+  z-index: -1;
   background: rgba(0, 0, 0, .4);
 }
 
@@ -423,14 +424,12 @@ html.remove-scroll {
   margin: 15px 0 40px;
 }
 
-.banner:not(:first-child) {
-  display: none;
-}
-
 .banner img {
   max-height: 610px;
   object-fit: cover;
 }
+
+.banner-list { overflow: hidden; }
 
 .banner-cta {
   padding: 10px 23px;
@@ -439,7 +438,7 @@ html.remove-scroll {
   color: var(--white-color);
 }
 
-.slider-cta {
+.slick-dots {
   position: absolute;
   top: 52.5%;
   right: 2.3%;
@@ -448,11 +447,13 @@ html.remove-scroll {
   text-indent: -9999px;
 }
 
-.slider-btn {
+.slick-dots li {
   display: inline-block;
+  text-indent: -9999px;
+  cursor: pointer;
 }
 
-.slider-btn::before {
+.slick-dots li::before {
   content: "";
   width: 11px;
   height: 11px;
@@ -461,11 +462,7 @@ html.remove-scroll {
   float: left;
 }
 
-.slider-btn.active::before {
-  background-color: var(--white-color);
-}
-
-.slider-btn.active::before {
+.slick-dots li.slick-active::before {
   background-color: var(--white-color);
 }
 /*=================================
@@ -704,6 +701,7 @@ html.remove-scroll {
 =================================*/
 .testimonial {
   position: relative;
+  z-index: 1;
   padding: 100px 0;
   background: url(../images/testimonial-bg.jpg) center no-repeat;
   background-size: cover;
@@ -714,10 +712,7 @@ html.remove-scroll {
 
 .testimonial .heading {
   margin-bottom: 48px;
-}
-
-.testimonial-item:not(:first-child) {
-  display: none;
+  color: var(--white-color);
 }
 
 .testimonial .slider-btn {
@@ -728,10 +723,24 @@ html.remove-scroll {
 .testimonial-list {
   text-align: center;
   line-height: 32px;
+  overflow: hidden;
+}
+
+.testimonial-list .slick-dots {
+  flex-direction: row;
+  text-align: center;
+  margin-top: 26px;
+  position: inherit;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-list .slick-dots li {
+  margin-right: 7px;
 }
 
 .testimonial-item {
-  width: 75%;
+  padding: 0 6.5%;
 }
 
 .name-info { margin-top: 17px; }
@@ -1073,6 +1082,10 @@ address {
   .slider-cta {
     transform: translateY(-52%);
   }
+
+  .testimonial-item {
+    padding: 0 ;
+  }
 }
 /*media query for 1024px starts here*/
 
@@ -1318,6 +1331,12 @@ address {
   .input-row { flex-direction: column; }
   .input-row .input-box:nth-child(1) {
     margin-right: 0;
+  }
+
+  .testimonial-para,
+  .quote,
+  .name {
+    font-size: 12px;
   }
 }
 /*media query for 480px ends here*/
