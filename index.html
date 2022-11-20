@@ -6,6 +6,7 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css">
   <link rel="stylesheet" media="screen" href="assets/css/style.css" >
 </head>
 
@@ -91,11 +92,6 @@
               </div>
             </li>
           </ul>
-          <div class="slider-cta">
-            <a href="#FIXME" class="slider-btn" title="Banner one">Slider Button</a>
-            <a href="#FIXME" class="slider-btn" title="Banner two">Slider Button</a>
-            <a href="#FIXME" class="slider-btn" title="Banner three">Slider Button</a>
-          </div>
         </div>
       </section>
       <!-- hero section styling ends -->
@@ -306,11 +302,6 @@
               </div>
             </li>
           </ul>
-          <div class="testimonial-cta">
-            <a href="#FIXME" class="slider-btn" title="Slide one">Cta dot</a>
-            <a href="#FIXME" class="slider-btn" title="Slide two">Cta dot</a>
-            <a href="#FIXME" class="slider-btn" title="Slide three">Cta dot</a>
-          </div>
         </div>
       </section>
       <!-- testimonials section styling ends -->
@@ -323,17 +314,17 @@
             <form action="#FIXME" class="form" method="post">
               <div class="input-row flex">
                 <div class="input-box">
-                  <input type="text" name="Full Name" placeholder="Full Name">
+                  <input class="full-name" type="text" name="Full Name" placeholder="Full Name">
                 </div>
                 <div class="input-box">
-                  <input type="email" name="Email" placeholder="Email address">
+                  <input class="email" type="email" name="Email" placeholder="Email address">
                 </div>
               </div>
               <div class="input-row input-box">
-                <input type="text" name="Subject" placeholder="Subject">
+                <input class="subject" type="text" name="Subject" placeholder="Subject">
               </div>
-              <div class="input-row">
-                <textarea name="message"  rows="7" placeholder="Tell about your project"></textarea>
+              <div class="input-row msg-box">
+                <textarea class="message" name="message"  rows="7" placeholder="Tell about your project"></textarea>
               </div>
               <input class="submit-btn" type="submit" value="Send Message">
             </form>
@@ -411,6 +402,8 @@
     <!--footer section end-->
   </div>
   <!--container end-->
-<script src="assets/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
