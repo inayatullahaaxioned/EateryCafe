@@ -1,9 +1,6 @@
 /* Author: 
 Inayatullah
 */
-/* Author: 
-Inayatullah
-*/
 // header background changing on some scroll 
 const header = document.querySelector('.header');
 
@@ -172,7 +169,6 @@ function validateInput(input, regex = "", minLimit = 4, maxLimit = 25) {
 //append error span for inputs in form
 function appendError(input, errorMsg) {
   let inputBox = input.parentElement;
-  console.log(inputBox);
   let errorSpan = document.createElement('span');
   errorSpan.className = "error";
   errorSpan.innerText = errorMsg;
@@ -193,7 +189,6 @@ menuItem.forEach(function (item, index) {
       // next btn function
       if (e.target.classList.contains('next-control')) {
         const modalBox = document.querySelector('.modal-box');
-        console.log(modalBox);
         if (modalBox) {
           modalBox.remove();
         }
@@ -207,7 +202,6 @@ menuItem.forEach(function (item, index) {
       // previous btn function
       if (e.target.classList.contains('prev-control')) {
         const modalBox = document.querySelector('.modal-box');
-        console.log(modalBox);
         if (modalBox) {
           modalBox.remove();
         }
@@ -248,7 +242,6 @@ function modal(item, index) {
   })
 
   activeModal.addEventListener('click', function () {
-    console.log(html);
     activeModal.remove();
     html.classList.remove('remove-scroll');
   });
