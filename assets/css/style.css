@@ -773,7 +773,6 @@ html.remove-scroll { overflow-y: hidden; }
 =================================*/
 .testimonial {
   position: relative;
-  z-index: 1;
   padding: 100px 0;
   background: url(../images/testimonial-bg.jpg) center no-repeat;
   background-size: cover;
@@ -976,7 +975,6 @@ address {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  z-index: 1;
   background: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,.8)),to(rgba(0,0,0,.8))), url(../images/footer-open-hour-bg.jpg) center no-repeat;
   background: -o-linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url(../images/footer-open-hour-bg.jpg) center no-repeat;
   background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url(../images/footer-open-hour-bg.jpg) center no-repeat;
