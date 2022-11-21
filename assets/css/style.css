@@ -1289,7 +1289,7 @@ address {
         -ms-flex-direction: column;
             flex-direction: column;
     position: fixed;
-    bottom: 24%;
+    bottom: 20%;
     left: -100%;
     gap: 15px;
     -webkit-transform: translateX(-50%);
